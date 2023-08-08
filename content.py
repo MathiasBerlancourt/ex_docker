@@ -61,3 +61,8 @@ v2 status code = {r_v2.status_code}
 
     '''
     print(output)
+
+    # impression dans un fichier
+    if os.environ.get('LOG') == 1:
+        with open('api_test.log', 'a') as file:
+            file.write(output)

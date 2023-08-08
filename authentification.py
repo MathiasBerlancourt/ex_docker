@@ -50,6 +50,6 @@ actual result = {r.status_code}
     print(output)
 
     # impression dans un fichier
-if os.environ.get('LOG') == 1:
-    with open('api_test.log', 'a') as file:
-        file.write(output)
+    if os.environ.get('LOG') == 1:
+        with open('api_test.log', 'a') as file:
+            file.write(output)
